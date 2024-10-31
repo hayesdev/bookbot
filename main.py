@@ -4,7 +4,7 @@
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
-    # print(text)
+    print(text)
 
     word_count = get_word_count(text)
     print(word_count)
@@ -40,10 +40,12 @@ def num_unique_char(string):
 def generate_report(dict, path, count):
     print(f"--- Begin report of {path} --- \n")
     print(f"{count} words found in the document")
+
     for key, value in dict.items():
         if key == '\n':
             key = 'new line'
         print(f"The '{key}' character was found {value} times")
+
     print("---------- End of report ----------")
 
 
